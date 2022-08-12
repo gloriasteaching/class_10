@@ -1,5 +1,6 @@
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     mySprite.sayText(":)", 200, false)
+    mySprite.setKind(SpriteKind.Enemy)
 })
 let mySprite: Sprite = null
 mySprite = sprites.create(img`
