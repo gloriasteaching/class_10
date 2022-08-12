@@ -56,4 +56,5 @@ let test = sprites.create(img`
 mySprite.setPosition(21, 47)
 myEnemy.setPosition(76, 65)
 test.setPosition(129, 37)
+test.follow(mySprite, 10)
 controller.moveSprite(mySprite)
