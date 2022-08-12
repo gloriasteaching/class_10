@@ -1,6 +1,6 @@
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
-    mySprite.sayText(":)", 200, false)
-    mySprite.setKind(SpriteKind.Enemy)
+    mySprite.sayText("ouch", 200, false)
+    mySprite.destroy(effects.spray, 500)
 })
 let mySprite: Sprite = null
 mySprite = sprites.create(img`
@@ -34,7 +34,7 @@ let myEnemy = sprites.create(img`
     . f d d d d d b d d f f f . 
     . f d f f f d f f d f . . . 
     . f f . . f f . . f f . . . 
-    `, SpriteKind.Enemy)
+    `, SpriteKind.Player)
 let test = sprites.create(img`
     . . . . . b b b b b b . . . . . 
     . . . b b 9 9 9 9 9 9 b b . . . 
